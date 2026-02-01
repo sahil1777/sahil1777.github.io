@@ -1,57 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #020617;
+  --card: #020617;
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: system-ui, sans-serif;
-    margin: 0;
-    background: #0f172a;
-    color: #e5e7eb;
-    line-height: 1.6;
-  }
-  
-  section, header, footer {
-    max-width: 900px;
-    margin: auto;
-    padding: 3rem 1.5rem;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-  }
-  
-  .hero h2 {
-    color: #38bdf8;
-  }
-  
-  .links a {
-    margin-right: 1rem;
-    color: #38bdf8;
-    text-decoration: none;
-  }
-  
-  .skills span {
-    display: inline-block;
-    background: #1e293b;
-    padding: 0.4rem 0.8rem;
-    margin: 0.3rem;
-    border-radius: 6px;
-  }
-  
-  .card {
-    background: #020617;
-    padding: 1.5rem;
-    margin-top: 1.5rem;
-    border-radius: 10px;
-  }
-  
-  .tech {
-    color: #94a3b8;
-    font-size: 0.9rem;
-  }
-  
-  .date {
-    color: #94a3b8;
-  }
-  
-  footer {
-    text-align: center;
-    border-top: 1px solid #1e293b;
-  }
-  
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: var(--text);
+}
+
+/* ---------- Layout ---------- */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 5rem 1.5rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  background: var(--accent);
+  color: #020617;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: linear-gradient(145deg, #020617, #020617);
+  border: 1px solid #020617;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.skills span {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  transition: all 0.25s ease;
+}
+
+.skills span:hover {
+  background: var(--accent);
+  color: #020617;
+}
+
+/* ---------- Reveal Animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 1px solid #1e293b;
+  color: var(--muted);
+}
