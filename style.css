@@ -1,0 +1,57 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+  }
+  
+  section, header, footer {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero h2 {
+    color: #38bdf8;
+  }
+  
+  .links a {
+    margin-right: 1rem;
+    color: #38bdf8;
+    text-decoration: none;
+  }
+  
+  .skills span {
+    display: inline-block;
+    background: #1e293b;
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem;
+    border-radius: 6px;
+  }
+  
+  .card {
+    background: #020617;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .tech {
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+  
+  .date {
+    color: #94a3b8;
+  }
+  
+  footer {
+    text-align: center;
+    border-top: 1px solid #1e293b;
+  }
+  
